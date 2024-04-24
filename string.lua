@@ -8,3 +8,11 @@ html = [[
 ]]
 
 print(html)
+
+print("2" + 6)
+print("2" + "6")
+print("2+6")
+print("-2e2" * "6")
+print("error" .. 1) -- 字符串连接使用 ..
+print("a" .. "b")
+print("157" .. "428")
