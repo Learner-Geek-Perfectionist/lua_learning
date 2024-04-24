@@ -9,7 +9,7 @@ local str2 = "This is also a string"
 local str = "Hello, "
 str = str .. "World!"
 
-print("str")
+print(str)
 -- 3.[[ ]]之间的字符串
 
 local multilineString = [[
@@ -75,3 +75,37 @@ print("\n第三次截取", string.format("%q", third_sub))
 --越界索引，输出原始字符串
 local fourth_sub = string.sub(sourcestr, -100)
 print("\n第四次截取", string.format("%q", fourth_sub))
+
+-- 字符串大小写转换
+
+string1 = "Lua"
+print(string.upper(string1))
+print(string.lower(string1))
+
+--字符串查找与反转
+--string.find(str,substr,i)
+--str：文本字符串
+--sustr：目标字符串
+--i：指定搜索的起始位置
+--返回文本串在目标串的起始和结束位置
+String = "Lua Tutorial"
+print(string.find(String, "Tutorial"))
+reversestring = string.reverse(String)
+print("新字符串为", reversestring)
+
+--字符串格式化
+
+string1 = "Lua"
+string2 = "Tutorial"
+number1 = 10
+number2 = 20
+require("string")
+--字符串基本格式化
+print(string.format("基本格式化 %s %s", string1, string2))
+
+--日期格式化
+date, month, year = 2, 1, 2014
+
+print(string.format("日期格式化 %02d/%02d/%04d", date, month, year))
+
+print(string.format("%.4f", 1 / 3))
